@@ -2,7 +2,7 @@
 
 Pi / Agent Skills：把 Markdown 上传到 [rentry.co](https://rentry.co)，立刻拿到免登录可打开的渲染页 URL。
 
-无需账号、无需 API key。浏览器打开返回的链接就是渲染好的 Markdown。
+无需账号、无需 API key。浏览器打开返回的链接就是渲染好的 Markdown。页面公开，上传前必须先扫敏感信息。
 
 ## 安装
 
@@ -17,6 +17,7 @@ git clone https://github.com/stackwalker-wtf/cli-md-share.git ~/.agents/skills/c
 ## 用法
 
 ```bash
+bash scripts/scan.sh note.md          # 先扫敏感信息，未通过不准上传
 bash scripts/upload.sh note.md
 echo '# hello' | bash scripts/upload.sh
 bash scripts/upload.sh note.md --title "标题" --url my-slug
